@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>VIRTUAL PET</title>
+        <div id="canvas">
+        <canvas id="myCanvas" height="600" width="800" style="border: 10px solid black"></canvas>
+        <br>
+        <input id="input">
+        </div>
+        <img id="pet" width="220" height="277" src="cutepet.png" alt="cutePet">
+        <script>
+        window.onload = function() {
+            var c=document.getElementById("myCanvas");
+            var ctx=c.getContext("2d");
+            ctx.fillStyle = "white"
+            var img=document.getElementById("pet");
+            ctx.rotate(0);
+            //on rotation y,-x
+            ctx.drawImage(img,330,250);
+        };
+        var runMain = setInterval(main, 100)
+        function main() {
+            var valueInput = document.getElementById("input").value;
+            console.log(valueInput);
+            if (valueInput == "hi" || valueInput == "Hi" || valueInput == "hey" || valueInput == "Hey") {
+                document.getElementById("input").value = "";
+                var myName = prompt("Hey! Nice to meet, I am your virtual pet! You can name me whatever you want:  ");
+            }
+            if (valueInput == "How are you" || valueInput == "How was your day") {
+                document.getElementById("input").value = "";
+                var yourDay = prompt("My day was good, how was yours?");
+            }
+        }
+        function sleep() {
+            var i;
+            for (i = 0; i < 2000;) {
+                console.log("SLEEP");
+                i += 1;
+            }
+        }
+        </script>
+        
+        <style>
+            #canvas {
+                text-align: center;
+            }
+            #pet {
+                display: none;
+            }
+            #input {
+                font-size: 100px;
+            }
+        </style>
+    </head>
+    </div>
+</html>

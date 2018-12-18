@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<center>
+
+<style>
+h2 {
+   font-size:100px;
+   color:blue;
+   font-weight:bold;
+   text-align:center;
+}
+</style>
+
+<h2>CALCULATOR</h2>
+
+<input type="text" id="value1">
+
+<input type="text" id="value2">
+
+<p id="demo"></p>
+
+<button type="button" onclick="add()"value="add">+</button> 
+
+<script>
+function add(){
+var v1 = parseInt(document.getElementById("value1").value);
+var v2 = parseInt(document.getElementById("value2").value);
+document.getElementById("demo").innerHTML =  v1 + v2  ;}
+</script>
+
+<button type="button" onclick="subtract()"value="subtract">-</button>
+
+<script>
+function subtract(){
+var v3 = parseInt(document.getElementById("value1").value);
+var v4 = parseInt(document.getElementById("value2").value);
+document.getElementById("demo").innerHTML = v3 - v4;}
+</script>
+
+<button type="button" onclick="divide()"value="divide">/</button>
+
+<script>
+function divide(){
+var v5 = parseInt(document.getElementById("value1").value);
+var v6 = parseInt(document.getElementById("value2").value);
+document.getElementById("demo").innerHTML = v5 / v6;}
+</script>
+
+<button type="button" onclick="multiply()"value="multiply">*</button>
+
+<script>
+function multiply(){
+var v7 = parseInt(document.getElementById("value1").value);
+var v8 = parseInt(document.getElementById("value2").value);
+document.getElementById("demo").innerHTML = v7 * v8;}
+</script>
+
+<button type="button" onclick="sqrt()"value="Math.sqrt()">sqrt</button>
+
+<script>
+function sqrt(){
+var v9 = parseInt(document.getElementById("value1").value);
+document.getElementById("demo").innerHTML = Math.sqrt(v9);}
+</script>
+
+<br>
+<br>
+
+If you dont like math do this!!!!!
+
+<br>
+
+<a href="help.html">GAMES!!!!</a>
+
+</center>
+</body>
+</html> 

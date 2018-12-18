@@ -1,0 +1,24 @@
+<html>
+    <head>
+            <span id="fruit"></span>
+    </head>
+    <style>
+#fruit {
+    margin: 400px;
+    font-size: 100px;
+}
+    </style>
+    <script>
+title = ["Speed", "Reading", 'Facts.', 'The', 'average', 'person', 'in', 'business', 'reads', 'no', 'faster', 'than', 'people', 'did', '100', 'years', 'ago.', 'The', 'average', 'reading', 'speed', 'is', '200', 'to', '250', 'words', 'a', 'minute', 'in', 'non-technical', 'material', 'roughly', '2', 'minutes', 'per', 'page.'];
+
+var i = 0;  // the index of the current item to show
+var x = 200;
+
+setInterval(function() {            // setInterval makes it run repeatedly
+    document
+        .getElementById('fruit')
+        .innerHTML = title[i++];    // get the item and increment i to move to the next
+    if (i == title.length) i = 0;   // reset to first element if you've reached the end
+}, x);             
+    </script>
+</html>
