@@ -1,2 +1,1 @@
-# AllTheCodezzz
-All My Codezzz
+# My Math quad calculator
