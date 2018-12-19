@@ -34,26 +34,35 @@
         var x1, x2, x3, x4, y1, y2, y3, y4;
         var canvas;
         var context;
-        function omg() {
-            var gcd = function(a, b) {
-              if (b < 0.0000001) return a;                // Since there is a limited precision we need to limit the value.
-
-              return gcd(b, Math.floor(a % b));           // Discard any fractions due to limitations in precision.
-            };
-
-            var fraction = 3.666667;
-            var len = fraction.toString().length - 2;
-
-            var denominator = Math.pow(10, len);
-            var numerator = fraction * denominator;
-
-            var divisor = gcd(numerator, denominator);    // Should be 5
-
-            numerator /= divisor;                         // Should be 687
-            denominator /= divisor;                       // Should be 2000
-
-            alert(Math.floor(numerator) + '/' + Math.floor(denominator));
+        function gcd(a, b) {
+            return (b) ? gcd(b, a % b) : a;
         }
+        var decimalToFraction = function (_decimal) {
+            if (_decimal == parseInt(_decimal)) {
+                return {
+                    top: parseInt(_decimal),
+                    bottom: 1,
+                    display: parseInt(_decimal) + '/' + 1
+                };
+            }
+            else {
+                var top = _decimal.toString().includes(".") ? _decimal.toString().replace(/\d+[.]/, '') : 0;
+                var bottom = Math.pow(10, top.toString().replace('-','').length);
+                if (_decimal >= 1) {
+                    top = +top + (Math.floor(_decimal) * bottom);
+                }
+                else if (_decimal <= -1) {
+                    top = +top + (Math.ceil(_decimal) * bottom);
+                }
+
+                var x = Math.abs(gcd(top, bottom));
+                return {
+                    top: (top / x),
+                    bottom: (bottom / x),
+                    display: (top / x) + '/' + (bottom / x)
+                };
+            }
+        };
         var calGo = setInterval(calShow, 20)
         function calShow() {
             //canvas setup
