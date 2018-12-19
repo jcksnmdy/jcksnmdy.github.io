@@ -112,6 +112,24 @@
             var bcs = (Math.round(100*((y3-y2)/(x3-x2))/100));
             var acs = (Math.round(100*((y3-y1)/(x3-x1))/100));
             var bds = (Math.round(100*((y4-y2)/(x4-x2))/100));
+            var gcd = function(a, b) {
+              if (b < 0.0000001) return a;                // Since there is a limited precision we need to limit the value.
+
+              return gcd(b, Math.floor(a % b));           // Discard any fractions due to limitations in precision.
+            };
+
+            var fraction = abs;
+            var len = fraction.toString().length - 2;
+
+            var denominator = Math.pow(10, len);
+            var numerator = fraction * denominator;
+
+            var divisor = gcd(numerator, denominator);
+
+            numerator /= divisor;                         //3
+            denominator /= divisor;                       //11
+
+            alert(Math.floor(numerator) + '/' + Math.floor(denominator));
             //controlling the displays
             document.getElementById("s").innerHTML = "AB:  " + abs;
             document.getElementById("sl").innerHTML = "CD:  " + cds;
