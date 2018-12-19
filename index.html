@@ -1,7 +1,6 @@
 <html>
     <div class="bg">
     <head>
-        <script src="math.js" type="text/javascript"></script>
         <!--Title-->
         <link rel="icon" href="https://www.pexels.com/photo/nature-red-love-romantic-67636/">
         <title>Quadralateral Classification</title>
@@ -107,24 +106,12 @@
             document.getElementById("callll").innerHTML = "BC:  " + bc;
             document.getElementById("ical").innerHTML = "AC:  " + ac;
             document.getElementById("icall").innerHTML = "BD:  " + bd;
-            const absss = (y2-y1)/(x2-x1);
-            const cdsss = (y4-y3)/(x4-x3);
-            const adsss = (y4-y1)/(x4-x1);
-            const bcsss = (y3-y2)/(x3-x2);
-            const acsss = (y3-y1)/(x3-x1);
-            const bdsss = (y4-y2)/(x4-x2);
-            const abss = Math.number(absss);
-            const cdss = Math.number(cdsss);
-            const adss = math.number(adsss);
-            const bcss = math.number(bcsss);
-            const acss = math.number(acsss);
-            const bdss = math.number(bdsss);
-            const abs = math.fraction(abss);
-            const cds = math.fraction(cdss);
-            const ads = math.fraction(adss);
-            const bcs = math.fraction(bcss);
-            const acs = math.fraction(acss);
-            const bds = math.fraction(bdss);
+            const abs = (y2-y1)/(x2-x1);
+            const cds = (y4-y3)/(x4-x3);
+            const ads = (y4-y1)/(x4-x1);
+            const bcs = (y3-y2)/(x3-x2);
+            const acs = (y3-y1)/(x3-x1);
+            const bds = (y4-y2)/(x4-x2);
             //controlling the displays
             document.getElementById("s").innerHTML = "AB:  " + abs;
             document.getElementById("sl").innerHTML = "CD:  " + cds;
