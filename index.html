@@ -28,7 +28,7 @@
         </div>
         <br>
         <!--all the different measurments shown-->
-        <p id="iall"></p><p id="d">DISTANCE</p><p id="cal"></p><p id="call"></p><p id="calll"></p><p id="callll"></p><p id="dl">DIAGONAL LENGTH</p><p id="ical"></p><p id="icall"></p><p id="icalll"></p><p id="icallll"></p><p id="ss">SLOPE</p><p id="s"></p><p id="sl"></p><p id="slo"></p><p id="slop"></p><p id="slopp"></p><p id="sloppe"></p>
+        <p id="iall"></p><p id="d">DISTANCE</p><p id="cal"></p><p id="call"></p><p id="calll"></p><p id="callll"></p><p id="dl">DIAGONAL LENGTH</p><p id="ical"></p><p id="icall"></p><p id="icalll"></p><p id="icallll"></p><p id="ss">SLOPE</p><p id="s"></p><p id="sl"></p><p id="slo"></p><p id="slop"></p><p id="slopp"></p><p id="sloppe"></p><p id="degree"></p><p id="dega"></p>
         <script>
         var x1, x2, x3, x4, y1, y2, y3, y4;
         var canvas;
@@ -38,12 +38,6 @@
         }
         var calGo = setInterval(calShow, 20)
         function calShow() {
-            console.log(calcAngleDegrees(5, 5));
-            //expected output: 45
-            console.log(calcAngleDegrees(10, 10));
-            //expected output: 45
-            console.log(calcAngleDegrees(0, 10));
-            //expected output: 90
             //canvas setup
             canvas = document.getElementById("myCanvas");
             context = canvas.getContext("2d");
@@ -140,6 +134,8 @@
             document.getElementById("slop").innerHTML = "BC:  " + bcsy + "/" + bcsx;
             document.getElementById("slopp").innerHTML = "AC:  " + acsy + "/" + acsx;
             document.getElementById("sloppe").innerHTML = "BD:  " + bdsy + "/" + bdsx;
+            //degrees
+            document.getElementById("dega").innerHTML = (calcAngleDegrees(5, 5));
             var log;
             //document.getElementById("icalll").innerHTML = "AD:  " + idon;
             //document.getElementById("icallll").innerHTML = "BC:  " + idone;
@@ -233,11 +229,11 @@
             text-align: center;
             font-size: 50px;
         }
-        #cal, #call, #calll, #calll, #callll, #ical, #icall, #icalll, #icallll, #s, #sl, #slo, #slop, #slopp, #sloppe {
+        #cal, #call, #calll, #calll, #callll, #ical, #icall, #icalll, #icallll, #s, #sl, #slo, #slop, #slopp, #sloppe, #dega {
             text-align: center;
             font-size: 50px;
         }
-        #d, #dl, #ss {
+        #d, #dl, #ss, #degree {
             text-align: center;
             font-size: 30px;
             color: black;
