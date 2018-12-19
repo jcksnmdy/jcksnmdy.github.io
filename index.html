@@ -20,7 +20,6 @@
             <br>
             <input placeholder="DX" type="text" id="ix4"><input placeholder="DY" type="text" id="iy4">
             <br>
-            <button onclick="FUNCTION">SLOPE</button>
         </p>
         <!--canvas controllig-->
         <div id="buon"><button onclick="candaw()" id="button"><strong>DRAW</strong></button><button onclick="cllear()" id="buton"><strong>CLEAR</strong></button></div>
@@ -107,19 +106,18 @@
             document.getElementById("callll").innerHTML = "BC:  " + bc;
             document.getElementById("ical").innerHTML = "AC:  " + ac;
             document.getElementById("icall").innerHTML = "BD:  " + bd;
-            var abss = Math.number(Math.round((y2-y1)/(x2-x1)));
-            var cdss = Math.number(Math.round((y4-y3)/(x4-x3)));
-            var adss = Math.number(Math.round((y4-y1)/(x4-x1)));
-            var bcss = Math.number(Math.round((y3-y2)/(x3-x2)));
-            var acss = Math.number(Math.round((y3-y1)/(x3-x1)));
-            var bdss = Math.number(Math.round((y4-y2)/(x4-x2)));
+            var abss = Math.number((y2-y1)/(x2-x1)));
+            var cdss = Math.number((y4-y3)/(x4-x3)));
+            var adss = Math.number((y4-y1)/(x4-x1)));
+            var bcss = Math.number((y3-y2)/(x3-x2)));
+            var acss = Math.number((y3-y1)/(x3-x1)));
+            var bdss = Math.number((y4-y2)/(x4-x2)));
             var abs = Math.fraction(abss);
             var cds = Math.fraction(cdss);
             var ads = Math.fraction(adss);
             var bcs = Math.fraction(bcss);
             var acs = Math.fraction(acss);
             var bds = Math.fraction(bdss);
-            
             //controlling the displays
             document.getElementById("s").innerHTML = "AB:  " + abs;
             document.getElementById("sl").innerHTML = "CD:  " + cds;
