@@ -33,8 +33,17 @@
         var x1, x2, x3, x4, y1, y2, y3, y4;
         var canvas;
         var context;
+        function calcAngleDegrees(x, y) {
+            return Math.atan2(y, x) * 180 / Math.PI;
+        }
         var calGo = setInterval(calShow, 20)
         function calShow() {
+            console.log(calcAngleDegrees(5, 5));
+            //expected output: 45
+            console.log(calcAngleDegrees(10, 10));
+            //expected output: 45
+            console.log(calcAngleDegrees(0, 10));
+            //expected output: 90
             //canvas setup
             canvas = document.getElementById("myCanvas");
             context = canvas.getContext("2d");
