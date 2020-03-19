@@ -6,8 +6,8 @@
         padding: 10px; 
 } 
 #card1, #card2, #card3, #card4 {
-        width: 275px;
-        height: 225px; 
+        width: 90%;
+        height: 90%; 
         border: 3px solid white; 
         padding: 10px; 
         background-color: cornflowerblue;
@@ -17,8 +17,8 @@
         float: left; 
         margin: 5px; 
         padding: 10px; 
-        height: 250px;
-        width: 301px;
+        height: 90%;
+        width: 22%;
         background-color: yellow;
 } 
 p { 
