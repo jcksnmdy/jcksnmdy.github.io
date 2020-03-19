@@ -11,7 +11,7 @@ function allowDrop(ev) {
         var data = ev.dataTransfer.getData("text"); 
         ev.target.appendChild(document.getElementById(data)); 
 } 
-function pointUp(ev) {
+function pointUp() {
     var score = document.getElementById('points');
     var number = score.innerHTML;
     number++;
