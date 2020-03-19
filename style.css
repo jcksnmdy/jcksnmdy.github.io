@@ -1,0 +1,28 @@
+#box { 
+        margin: auto; 
+        width: 1210; 
+        height: 275px; 
+        border: 3px solid green; 
+        padding: 10px; 
+} 
+#card1, #card2, #card3, #card4 {
+        width: 275px;
+        height: 225px; 
+        border: 3px solid white; 
+        padding: 10px; 
+        background-color: cornflowerblue;
+        float: left;
+}
+#box1, #box2, #box3, #box4 { 
+        float: left; 
+        margin: 5px; 
+        padding: 10px; 
+        height: 250px;
+        width: 301px;
+        background-color: yellow;
+} 
+p { 
+        font-size:20px; 
+        font-weight:bold; 
+        text-align:center; 
+} 
