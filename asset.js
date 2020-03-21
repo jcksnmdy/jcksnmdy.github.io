@@ -213,8 +213,8 @@ function card4Down() {
     document.getElementById('box4').style.visibility = 'hidden';
 }
 function start() {
-    setTimeout(card1Down, 15000);
-    setTimeout(card2Down, 30000);
-    setTimeout(card3Down, 45000);
-    setTimeout(card4Down, 60000);
+    setTimeout(card1Down, 10000);
+    setTimeout(card2Down, 20000);
+    setTimeout(card3Down, 30000);
+    setTimeout(card4Down, 40000);
 }
