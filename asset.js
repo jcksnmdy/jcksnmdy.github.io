@@ -176,6 +176,7 @@ function allowDrop(ev) {
 } 
 var team = 'blue';
 function switchTeams() {
+    clearTimeout();
     if (team == 'blue') {
         team = 'red';
     } else {
