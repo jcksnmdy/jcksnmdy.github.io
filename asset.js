@@ -152,6 +152,17 @@ var charadeWords = [
 ];
 var count = 0
 function assignWords() {
+    if (count > 50) {
+        document.getElementById('card1Word').style.backgroundColor = 'red';
+        document.getElementById('card2Word').style.backgroundColor = 'red';
+        document.getElementById('card3Word').style.backgroundColor = 'red';
+        document.getElementById('card4Word').style.backgroundColor = 'red';
+    } else {
+        document.getElementById('card1Word').style.backgroundColor = 'green';
+        document.getElementById('card2Word').style.backgroundColor = 'green';
+        document.getElementById('card3Word').style.backgroundColor = 'green';
+        document.getElementById('card4Word').style.backgroundColor = 'green';
+    }
     document.getElementById('card1Word').innerHTML = charadeWords[count];
     count += 1;
     document.getElementById('card2Word').innerHTML = charadeWords[count];
