@@ -202,11 +202,17 @@ function pointUp() {
     if (team == 'blue') {
         var score = document.getElementById('bluePoints');
         var number = score.innerHTML;
+        if (count > 50) {
+            number++;
+        }
         number++;
         score.innerHTML = number;
     } else {
         var scoree = document.getElementById('redPoints');
         var numbere = scoree.innerHTML;
+        if (count > 50) {
+            numbere++;
+        }
         numbere++;
         scoree.innerHTML = numbere;
     }
