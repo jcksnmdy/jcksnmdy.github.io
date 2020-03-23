@@ -304,11 +304,23 @@ function start() {
     document.getElementById('box3').style.opacity = '1';
     document.getElementById('box4').style.opacity = '1';
     card1card = setTimeout(card1Down, 9000);
+    setTimeout(function() {
+        document.getElementById('box1').style.backgroundColor = 'red';
+    }, 8000);
     console.log("Card 1 down");
     card2card = setTimeout(card2Down, 17000);
+    setTimeout(function() {
+        document.getElementById('box2').style.backgroundColor = 'red';
+    }, 16000);
     console.log("Card 2 down");
     card3card = setTimeout(card3Down, 25000);
+    setTimeout(function() {
+        document.getElementById('box3').style.backgroundColor = 'red';
+    }, 24000);
     console.log("Card 3 down");
     card4card = setTimeout(card4Down, 32000);
+    setTimeout(function() {
+        document.getElementById('box4').style.backgroundColor = 'red';
+    }, 31000);
     console.log("Card 4 down");
 }
