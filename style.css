@@ -1,25 +1,23 @@
 #box { 
         margin: auto; 
         width: 1210; 
-        height: 275px; 
+        height: 250px; 
         border: 3px solid green; 
-        padding: 10px; 
+        padding: 5px; 
 } 
 #card1 {
         border: 3px solid white; 
-        padding: 10px; 
         background-color: cornflowerblue;
         float: left;
         width: 250px;
         z-index: 2;
-        min-height: 30px;
+        min-height: 75px;
 }
 #box1, #box2, #box3, #box4 { 
         float: left; 
         margin: 5px; 
-        padding: 10px; 
-        height: 90%;
-        width: 20%;
+        height: 95%;
+        width: 24%;
         background-color: yellow;
         z-index: 1;
 } 
@@ -60,4 +58,19 @@ button:hover{
 }
 #blue, #red {
         float: left;
+        padding: 0px;
+}
+#blue:hover {
+        background-color: blue;
+}
+#red:hover {
+        background-color: red;
+}
+#plusone {
+        color: darkgreen;
+        font-size: xx-large;
+        padding: 0px;
+}
+#points {
+        margin-left: 42%;
 }

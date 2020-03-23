@@ -7,34 +7,33 @@
 </head>
 <body>
 <div id="points">
-<div id="blue"><p>Blue Points</p><p id="bluePoints">0</p></div>
+<div id="blue" onclick="switchToBlue()"><p>Blue Points</p><p id="bluePoints">0</p></div>
 
-<div id="red"><p>Red Points</p><p id="redPoints">0</p></div>
+<div id="red" onclick="switchToRed()"><p>Red Points</p><p id="redPoints">0</p></div>
 </div>
+<p id="plusone" style="visibility: hidden;">+1</p>
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
+<div id="container1">
 <div id = "box"> 
-        <div id="box1" ondragover="allowDrop(event)" ondrop="dragDrop(event)" onclick="pointUp()"></div> 
-        <div id="box2" ondragover="allowDrop(event)" ondrop="dragDrop(event)" onclick="pointUp()"></div> 
-        <div id="box3" ondragover="allowDrop(event)" ondrop="dragDrop(event)" onclick="pointUp()"></div> 
-        <div id="box4" ondragover="allowDrop(event)" ondrop="dragDrop(event)" onclick="pointUp()"></div> 
+        <div id="box1" ondragover="allowDrop(event)" ondrop="dragDrop(event)" onclick="pointUp(1)"></div> 
+        <div id="box2" ondragover="allowDrop(event)" ondrop="dragDrop(event)" onclick="pointUp(2)"></div> 
+        <div id="box3" ondragover="allowDrop(event)" ondrop="dragDrop(event)" onclick="pointUp(3)"></div> 
+        <div id="box4" ondragover="allowDrop(event)" ondrop="dragDrop(event)" onclick="pointUp(4)"></div> 
 </div> 
 
-<button onclick="assignWords()">Randomize Words</button>
-<button onclick="switchTeams()">Done</button>
-<button onclick="start()">Start</button>
-
-<div id="card1">
+<div id="card1" ondragover="allowDrop(event)" ondrop="dragDrop(event)">
         <p id="card1Word" draggable="true" ondragstart="dragStart(event)">filler1</p>
         <p id="card2Word" draggable="true" ondragstart="dragStart(event)">filler2</p> 
         <p id="card3Word" draggable="true" ondragstart="dragStart(event)">filler3</p>
         <p id="card4Word" draggable="true" ondragstart="dragStart(event)">filler4</p>
 </div> 
-
+</div>
+<button onclick="assignWords()">Randomize Words</button>
+<button onclick="switchTeams()">Done</button>
+<button onclick="start()">Start</button>
+<p>To play: Select the team that will be going by clicking on the team that is going to go on the scorboard. Then click "Randomize Words" and drag each word onto a card (easiest on the left and hardest on the right). When you are ready, click "Start" and try and act out each card (for a harder game, try not to use sounds). While you play, click the yellow when your team guesses correctly before the card disapears! When your done, click "Done" to reset.</p>
 </body>
 <script src="asset.js">   
 </script>
