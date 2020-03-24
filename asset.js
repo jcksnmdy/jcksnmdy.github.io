@@ -214,22 +214,22 @@ function switchTeams() {
 var countt = 0;
 function crud() {
     boxPoint()
-    countt -= 0.02;
+    countt -= 0.08;
     document.getElementById('box1').style.opacity = countt;
 }
 function crudd() {
     boxxPoint()
-    countt -= 0.02;
+    countt -= 0.08;
     document.getElementById('box2').style.opacity = countt;
 }
 function cruddd() {
     boxxxPoint()
-    countt -= 0.02;
+    countt -= 0.08;
     document.getElementById('box3').style.opacity = countt;
 }
 function crudddd() {
     boxxxxPoint()
-    countt -= 0.02;
+    countt -= 0.08;
     document.getElementById('box4').style.opacity = countt;
 }
 function boxPoint() {
@@ -281,14 +281,14 @@ function pointUp(boxId) {
         setTimeout(function() {
             document.getElementById('box1').style.visibility = 'hidden';
             document.getElementById('plusone').style.visibility = 'hidden';
-        }, 800);    }
+        }, 300);    }
     if (boxId == '2') {
         boxxPoint();
         document.getElementById('plusone').style.visibility = 'visible';
         setTimeout(function() {
             document.getElementById('box2').style.visibility = 'hidden';
             document.getElementById('plusone').style.visibility = 'hidden';
-        }, 800);
+        }, 300);
     }
     if (boxId == '3') {
         boxxxPoint();
@@ -296,14 +296,14 @@ function pointUp(boxId) {
         setTimeout(function() {
             document.getElementById('box3').style.visibility = 'hidden';
             document.getElementById('plusone').style.visibility = 'hidden';
-        }, 800);    }
+        }, 300);    }
     if (boxId == '4') {
         boxxxxPoint();
         document.getElementById('plusone').style.visibility = 'visible';
         setTimeout(function() {
             document.getElementById('box4').style.visibility = 'hidden';
             document.getElementById('plusone').style.visibility = 'hidden';
-        }, 800);    }
+        }, 300);    }
     if (team == 'blue') {
         var score = document.getElementById('bluePoints');
         var number = score.innerHTML;
@@ -358,7 +358,7 @@ function card3Down() {
 function card4Down() {
     document.getElementById('box4').style.visibility = 'hidden';
 }
-var card1card, card2card, card3card, card4card;
+var card1card, card2card, card3card, card4card, card1card1, card2card2, card3card3, card4card4;
 function start() {
     document.getElementById('box1').style.visibility = 'visible';
     document.getElementById('box2').style.visibility = 'visible';
