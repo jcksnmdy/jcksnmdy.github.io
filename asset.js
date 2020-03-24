@@ -107,8 +107,40 @@ window.onload = function(){
 	html = document.getElementById('container1').innerHTML;
 }; 
 var count = 0
+var hardCount=50;
 function assignWords() {
-    if (count > 50) {
+    console.log(hardCount);
+    var x = document.getElementById("difficulty").value;
+    console.log(x);
+    if (x == '2') {
+        console.log("Hard")
+        count += 1;
+        hardCount = count+50;
+        document.getElementById('card1Word').innerHTML = charadeWords[hardCount];
+        count += 1;
+        hardCount = count+50;
+        document.getElementById('card2Word').innerHTML = charadeWords[hardCount];
+        count += 1;
+        hardCount = count+50;
+        document.getElementById('card3Word').innerHTML = charadeWords[hardCount];
+        count += 1;
+        hardCount = count+50;
+        document.getElementById('card4Word').innerHTML = charadeWords[hardCount];
+    } else {
+        document.getElementById('card1Word').innerHTML = charadeWords[count];
+        count += 1;
+        hardCount = count;
+        document.getElementById('card2Word').innerHTML = charadeWords[count];
+        count += 1;
+        hardCount = count;
+        document.getElementById('card3Word').innerHTML = charadeWords[count];
+        count += 1;
+        hardCount = count;
+        document.getElementById('card4Word').innerHTML = charadeWords[count];
+        count += 1;
+        hardCount = count;
+    }
+    if (hardCount > 50) {
         document.getElementById('card1Word').style.backgroundColor = 'red';
         document.getElementById('card2Word').style.backgroundColor = 'red';
         document.getElementById('card3Word').style.backgroundColor = 'red';
@@ -119,14 +151,6 @@ function assignWords() {
         document.getElementById('card3Word').style.backgroundColor = 'green';
         document.getElementById('card4Word').style.backgroundColor = 'green';
     }
-    document.getElementById('card1Word').innerHTML = charadeWords[count];
-    count += 1;
-    document.getElementById('card2Word').innerHTML = charadeWords[count];
-    count += 1;
-    document.getElementById('card3Word').innerHTML = charadeWords[count];
-    count += 1;
-    document.getElementById('card4Word').innerHTML = charadeWords[count];
-    count += 1;
 }
 function allowDrop(ev) { 
     ev.preventDefault(); 
@@ -148,6 +172,16 @@ function switchToBlue() {
 function switchToRed() {
     team = 'red'
 }
+function switchToYellow() {
+    team = 'yellow'
+}
+function switchToGreen() {
+    team = 'green'
+}
+function switchToPurple() {
+    team = 'purple'
+}
+
 function switchTeams() {
     clearTimeout(card1card);
     console.log("Card 1 down stopped");
@@ -158,6 +192,10 @@ function switchTeams() {
     console.log("Card 3 down stopped");
     clearTimeout(card4card);
     console.log("Card 4 down stopped");
+    clearTimeout(card1card1);
+    clearTimeout(card2card2);
+    clearTimeout(card3card3);
+    clearTimeout(card4card4);
     reset1();
     // if (team == 'blue') {
     //     team = 'red';
@@ -232,6 +270,9 @@ function constant() {
         document.getElementById('plusone').style.visibility = 'hidden';
     }
 }
+function fixCount() {
+    count = 0;
+}
 function pointUp(boxId) {
     countt = 0.3;
     if (boxId == '1') {
@@ -266,12 +307,36 @@ function pointUp(boxId) {
     if (team == 'blue') {
         var score = document.getElementById('bluePoints');
         var number = score.innerHTML;
-        if (count > 50) {
+        if (hardCount > 50) {
             number++;
         }
         number++;
         score.innerHTML = number;
-    } else {
+    } if (team == 'yellow') {
+        var score = document.getElementById('yellowPoints');
+        var number = score.innerHTML;
+        if (hardCount > 50) {
+            number++;
+        }
+        number++;
+        score.innerHTML = number;
+    } if (team == 'green') {
+        var score = document.getElementById('greenPoints');
+        var number = score.innerHTML;
+        if (hardCount > 50) {
+            number++;
+        }
+        number++;
+        score.innerHTML = number;
+    } if (team == 'purple') {
+        var score = document.getElementById('purplePoints');
+        var number = score.innerHTML;
+        if (hardCount > 50) {
+            number++;
+        }
+        number++;
+        score.innerHTML = number;
+    } if (team == 'red') {
         var scoree = document.getElementById('redPoints');
         var numbere = scoree.innerHTML;
         if (count > 50) {
@@ -304,23 +369,23 @@ function start() {
     document.getElementById('box3').style.opacity = '1';
     document.getElementById('box4').style.opacity = '1';
     card1card = setTimeout(card1Down, 9000);
-    setTimeout(function() {
+    card1card1 = setTimeout(function() {
         document.getElementById('box1').style.backgroundColor = 'red';
-    }, 8000);
+    }, 6000);
     console.log("Card 1 down");
     card2card = setTimeout(card2Down, 17000);
-    setTimeout(function() {
+    card2card2 = setTimeout(function() {
         document.getElementById('box2').style.backgroundColor = 'red';
-    }, 16000);
+    }, 14000);
     console.log("Card 2 down");
     card3card = setTimeout(card3Down, 25000);
-    setTimeout(function() {
+    card3card3 = setTimeout(function() {
         document.getElementById('box3').style.backgroundColor = 'red';
-    }, 24000);
+    }, 22000);
     console.log("Card 3 down");
     card4card = setTimeout(card4Down, 32000);
-    setTimeout(function() {
+    card4card4 = setTimeout(function() {
         document.getElementById('box4').style.backgroundColor = 'red';
-    }, 31000);
+    }, 29000);
     console.log("Card 4 down");
 }
