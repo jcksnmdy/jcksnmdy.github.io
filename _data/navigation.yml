@@ -6,13 +6,13 @@
 
 main:
   - title: "Skills"
-    url: /skills/
+    url: /teaching/
 
   - title: "Coding Projects"
-    url: /coding/    
+    url: /portfolio/    
 
   - title: "Electrical Projects"
-    url: /electrical/    
+    url: /publications/    
     
   - title: "Websites"
-    url: /websites/
+    url: /talks/
